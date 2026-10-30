@@ -1,0 +1,17 @@
+[
+  {
+    "canonical_name": "Hypertension",
+    "synonyms": ["hypertension", "high blood pressure"],
+    "category": "cardiovascular"
+  },
+  {
+    "canonical_name": "Diabetes Mellitus",
+    "synonyms": ["diabetes", "diabetes mellitus", "dm", "type 2 diabetes mellitus", "type 2 diabetes", "t2dm"],
+    "category": "endocrine"
+  },
+  {
+    "canonical_name": "Asthma",
+    "synonyms": ["asthma", "bronchial asthma"],
+    "category": "respiratory"
+  }
+]

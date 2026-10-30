@@ -1,0 +1,72 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+.venv/
+.idea/
+*.db
+*.sqlite3
+.DS_Store
+.vscode/
+
+# Local backups and temporary experiments
+backup_investigation_gaps_fix_20261013/
+backup_urine_test_status_fix_20261013/
+scratch/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Frontend dependencies and build output
+node_modules/
+dist/
+build/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Local clinical sample files - keep out of GitHub
+data/demo/case1.txt
+tests/test_samples/
+
+# Evaluation outputs containing record-level clinical data
+evaluation/actual_predictions.*
+evaluation/case_comparison.csv
+evaluation/ground_truth.*
+evaluation/test_cases.md
+evaluation/record_cluster_mapping.json
+evaluation/*_record_ids.json
+evaluation/*_cluster_ids.json
+evaluation/evaluation_500_dataset/evaluation_100_researcher_key.json
+evaluation/evaluation_500_dataset/evaluation_100_subset_notes.json
+evaluation/evaluation_500_dataset/evaluation_500_notes.*
+evaluation/evaluation_500_dataset/model_predictions_500.*
+evaluation/held_out_50_cases/held_out_50_cases.*
+evaluation/held_out_50_cases/researcher_unblinding_manifest.json
+evaluation/mtsamples_evaluation/mtsamples_record_outputs*
+evaluation/pilot_10_cases/pilot_10_cases.*
+
+# Evaluation reports, manifests, and generated outputs kept locally
+evaluation/annotation_template_sample.*
+evaluation/classification_report.txt
+evaluation/confusion_matrix.png
+evaluation/dataset_manifest.json
+evaluation/evaluation_report.md
+evaluation/evaluation_results.json
+evaluation/evaluation_summary.md
+evaluation/split_manifest.json
+evaluation/evaluation_500_dataset/dataset_manifest_500_notes.json
+evaluation/evaluation_500_dataset/evaluation_100_subset_manifest.json
+evaluation/evaluation_500_dataset/evaluation_500_distribution_*
+evaluation/evaluation_500_dataset/model_predictions_500_checkpoint.json
+evaluation/held_out_50_cases/dataset_manifest_50_cases.json
+evaluation/held_out_50_cases/held_out_50_cases_blinded.*
+evaluation/mtsamples_evaluation/annotation_template_sample.*
+evaluation/mtsamples_evaluation/*_distribution.png
+evaluation/mtsamples_evaluation/mtsamples_evaluation_report.md
+evaluation/mtsamples_evaluation/mtsamples_evaluation_summary.json

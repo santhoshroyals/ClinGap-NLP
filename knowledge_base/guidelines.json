@@ -1,0 +1,32 @@
+[
+  {
+    "rule_id": "R1",
+    "description": "Educational Demonstration Rule: Respiratory/symptomatic presentation – recommend CBC",
+    "criteria": {
+      "entities": ["SYMPTOM"]
+    },
+    "recommendation": {
+      "type": "INVESTIGATION",
+      "name": "CBC"
+    }
+  },
+  {
+    "rule_id": "R2",
+    "description": "Educational Demonstration Rule: Diabetes evaluation – recommend HbA1c",
+    "criteria": {
+      "entities": ["DISEASE"]
+    },
+    "recommendation": {
+      "type": "INVESTIGATION",
+      "name": "HbA1c"
+    }
+  },
+  {
+    "rule_id": "R3",
+    "description": "Educational Demonstration Rule: No gap case – recommend nothing",
+    "criteria": {
+      "entities": []
+    },
+    "recommendation": null
+  }
+]

@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic
+scispacy
+spacy
+torch
+transformers
+pandas
+streamlit
+python-dotenv
+loguru
+pytest
+pytest-asyncio

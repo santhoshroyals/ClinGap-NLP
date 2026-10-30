@@ -1,0 +1,31 @@
+[
+  {
+    "id": "cbc",
+    "name": "CBC",
+    "synonyms": ["cbc", "complete blood count", "complete blood cell count"]
+  },
+  {
+    "id": "xray",
+    "name": "Chest X-ray",
+    "synonyms": ["x-ray", "chest xray", "chest x-ray", "chest x ray", "cxr"]
+  },
+  {
+    "id": "hba1c",
+    "name": "HbA1c",
+    "synonyms": [
+      "hba1c",
+      "glycated hemoglobin",
+      "glycosylated hemoglobin",
+      "glycated haemoglobin",
+      "glycosylated haemoglobin",
+      "hemoglobin a1c",
+      "haemoglobin a1c",
+      "a1c",
+      "hba1c test",
+      "a1c test",
+      "hemoglobin a1-c",
+      "hemoglobin-a1c",
+      "hba-1c"
+    ]
+  }
+]
