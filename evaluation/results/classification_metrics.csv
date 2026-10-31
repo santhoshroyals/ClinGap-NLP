@@ -1,0 +1,60 @@
+Evaluation Component,Metric,Value,95% CI Lower,95% CI Upper,Scientific Notes
+Gap Detection,Sample Size (N),600,,,Held-out synthetic test cohort
+Gap Detection,True Positives (TP),200,,,Correctly flagged decision gaps
+Gap Detection,True Negatives (TN),205,,,Correctly identified guideline compliance
+Gap Detection,False Positives (FP),145,,,Spurious alerts from coarse rules & active non-target diseases
+Gap Detection,False Negatives (FN),50,,,Missed gaps from disjunctive negation syntax masking
+Gap Detection,Accuracy,67.50%,63.65%,71.13%,Overall correct decision rate (405/600)
+Gap Detection,Precision (PPV),57.97%,52.70%,63.06%,Positive predictive value (200/345)
+Gap Detection,Recall / Sensitivity (TPR),80.00%,74.60%,84.49%,True positive rate (200/250)
+Gap Detection,F1-Score,67.23%,,,Harmonic mean of precision and recall (2*TP / (2*TP + FP + FN))
+Gap Detection,Specificity (TNR),58.57%,53.34%,63.61%,True negative rate (205/350)
+Gap Detection,False Positive Rate (FPR),41.43%,,,Spurious alert rate (1 - Specificity)
+Gap Detection,False Negative Rate (FNR),20.00%,,,Missed omission rate (1 - Sensitivity)
+,,,,,
+Negation Detection,Total Mentions Evaluated,785,,,Clausal and coordinated entity assertions
+Negation Detection,True Positives (TP),200,,,Correctly scoped negations
+Negation Detection,True Negatives (TN),546,,,Correctly affirmed mentions
+Negation Detection,False Positives (FP),0,,,Affirmed mentions incorrectly negated
+Negation Detection,False Negatives (FN),39,,,Negated mentions missed by clausal window
+Negation Detection,Accuracy,95.03%,93.26%,96.38%,Overall correctness (746/785)
+Negation Detection,Precision,100.00%,98.12%,100.00%,PPV (200/200)
+Negation Detection,Recall,83.68%,78.48%,87.77%,Sensitivity (200/239)
+Negation Detection,F1-Score,91.12%,,,Harmonic mean (2 * 1.0 * 0.8368 / 1.8368)
+Negation Detection,Specificity,100.00%,99.30%,100.00%,TNR (546/546)
+,,,,,
+Investigation Status,Total Mentions Evaluated,350,,,Multi-class diagnostic status resolution
+Investigation Status,Overall Multi-Class Accuracy,88.86%,85.12%,91.75%,Exact diagonal matches (311/350)
+Investigation Status,Class 'completed/performed' Precision,100.00%,,,"TP=185, FP=0 (185/185)"
+Investigation Status,Class 'completed/performed' Recall,92.50%,,,"TP=185, FN=15 (185/200 ground truth support)"
+Investigation Status,Class 'completed/performed' F1,96.10%,,,Harmonic mean
+Investigation Status,Class 'pending' Precision,100.00%,,,"TP=26, FP=0 (26/26)"
+Investigation Status,Class 'pending' Recall,52.00%,,,"TP=26, FN=24 (26/50 ground truth support)"
+Investigation Status,Class 'pending' F1,68.42%,,,Harmonic mean
+Investigation Status,Class 'ordered' Evaluation Status,Zero Ground Truth Support,,,Support = 0 in GT; received 39 predicted false assignments
+Investigation Status,Class 'ordered' Precision,0.00%,,,"TP=0, FP=39 (0/39)"
+Investigation Status,Class 'ordered' Recall,Undefined (N/A),,,Ground truth support is 0
+Investigation Status,Class 'ordered' F1,Undefined (N/A),,,Cannot compute F1 with zero support
+Investigation Status,Class 'not performed' Precision,100.00%,,,"TP=100, FP=0 (100/100)"
+Investigation Status,Class 'not performed' Recall,100.00%,,,"TP=100, FN=0 (100/100 ground truth support)"
+Investigation Status,Class 'not performed' F1,100.00%,,,Harmonic mean
+Investigation Status,Macro F1 (Supported Classes Only),88.17%,,,Unweighted average across 3 supported classes: (96.10 + 68.42 + 100.0)/3
+,,,,,
+Clinical NER,Micro Precision,55.23%,,,Pooled entity span precision (1531 / 2772)
+Clinical NER,Micro Recall,91.84%,,,Pooled entity span recall (1531 / 1667)
+Clinical NER,Micro F1-Score,68.99%,,,Overall pooled span F1
+Clinical NER,Macro F1 (Supported Classes Only),83.81%,,,"Average of 6 annotated classes (DISEASE, MED, FREQ, DOSAGE, SYMPTOM, INVESTIGATION)"
+Clinical NER,Category DISEASE F1,92.44%,,,"P=93.22% (550/590), R=91.67% (550/600), Support=600"
+Clinical NER,Category MEDICATION F1,96.62%,,,"P=100.00% (100/100), R=93.46% (100/107), Support=107"
+Clinical NER,Category FREQUENCY F1,96.91%,,,"P=100.00% (94/94), R=94.00% (94/100), Support=100"
+Clinical NER,Category DOSAGE F1,83.68%,,,"P=71.94% (100/139), R=100.00% (100/100), Support=100"
+Clinical NER,Category SYMPTOM F1,76.77%,,,"P=72.01% (337/468), R=82.20% (337/410), Support=410"
+Clinical NER,Category INVESTIGATION F1,56.73%,,,"P=39.59% (350/884), R=100.00% (350/350), Support=350 (generic tokens filtered downstream)"
+Clinical NER,Category DURATION Evaluation Status,Zero Ground Truth Support,,,Unannotated in benchmark
+Clinical NER,Category LAB_TEST Evaluation Status,Zero Ground Truth Support,,,Unannotated in benchmark
+,,,,,
+Runtime Latency,Inference Latency (Mean),116.62 ms,,,Per clinical note on standard CPU
+Runtime Latency,Inference Latency (Median),97.42 ms,,,Per clinical note on standard CPU
+Runtime Latency,Inference Latency (95th Percentile),129.50 ms,,,Per clinical note on standard CPU
+Runtime Latency,Inference Latency (Min / Max),"66.88 ms / 10,730.85 ms",,,Max latency includes first-note cold start / model weight loading
+Runtime Latency,Total Cohort Runtime,70.02 seconds,,,Total wall-clock time for 600 complete notes (8.57 notes/sec)
